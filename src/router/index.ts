@@ -17,6 +17,21 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/wifi',
+    name: 'wifi',
+    component: () => import(/* webpackChunkName: "wifi" */ '../views/Wifi.vue')
+  },
+  {
+    path: '/wifi/:network',
+    name: 'wifi/network',
+    component: () => import(/* webpackChunkName: "network" */ '../views/wifi/Network.vue')
+  },
+  {
+    path: '/wifi/:network/connect',
+    name: 'wifi/network/connect',
+    component: () => import(/* webpackChunkName: "connect" */ '../views/wifi/Connect.vue')
   }
 ]
 
